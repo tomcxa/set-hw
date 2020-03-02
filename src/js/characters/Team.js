@@ -33,9 +33,3 @@ export default class Team {
         return [...this.members];
     }
 }
-
-const team = new Team();
-
-team.addAll();
-
-console.log(team.toArray());
