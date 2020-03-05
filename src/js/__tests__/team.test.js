@@ -23,15 +23,16 @@ describe('Тестим тиму', () => {
     });
     test('Проверка Team.addAll()', () => {
         const team = new Team();
-        team.addAll();
+        const bowman = new Bowman('Лучара');
+        const daemon = new Daemon('Демонюга');
+        const mag = new Magician('Ватный');
+        const war = new Swordsman('Вар');
+        const zombie = new Zombie('Ходячий Мертвяк');
+        const undead = new Undead('Мертвячий Ходяк');
+        team.addAll(bowman, bowman, daemon, mag, war, zombie, undead);
         const result = team.toArray();
         const expected = [
-            new Bowman('Лучара'),
-            new Daemon('Демонюга'),
-            new Magician('Ватный'),
-            new Swordsman('Вар'),
-            new Zombie('Ходячий Мертвяк'),
-            new Undead('Мертвячий Ходяк'),
+            bowman, daemon, mag, war, zombie, undead,
         ];
 
         expect(result).toEqual(expected);

@@ -17,15 +17,7 @@ export default class Team {
         this.members.add(character);
     }
 
-    addAll() {
-        const allCharacters = [
-            new Bowman('Лучара'),
-            new Daemon('Демонюга'),
-            new Magician('Ватный'),
-            new Swordsman('Вар'),
-            new Zombie('Ходячий Мертвяк'),
-            new Undead('Мертвячий Ходяк'),
-        ];
+    addAll(...allCharacters) {
         allCharacters.forEach((character) => this.members.add(character));
     }
 
